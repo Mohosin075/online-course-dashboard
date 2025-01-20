@@ -4,6 +4,7 @@ const Home = () => {
   return (
     <div>
       <h3 className="text-4xl text-center text-primary">This is Online Course Dashboard</h3>
+      where is dashboard
     </div>
   );
 };

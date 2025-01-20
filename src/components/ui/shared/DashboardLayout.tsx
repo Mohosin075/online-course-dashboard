@@ -1,11 +1,12 @@
 import { Children } from "@/types";
+import Sidebar from "./navbar/Sidebar";
 
 const DashboardLayout = ({ children }: Children) => {
   return (
-    <div>
+    <div className="CContainer">
       <div className="drawer lg:drawer-open">
         <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
-        <div className="drawer-content flex flex-col items-start justify-start">
+        <div className="drawer-content">
           {/* Page content here */}
           {children}
         </div>
@@ -15,15 +16,8 @@ const DashboardLayout = ({ children }: Children) => {
             aria-label="close sidebar"
             className="drawer-overlay"
           ></label>
-          <ul className="menu bg-base-200 text-base-content min-h-full w-80 p-4">
-            {/* Sidebar content here */}
-            <li>
-              <a>Sidebar Item 1</a>
-            </li>
-            <li>
-              <a>Sidebar Item 2</a>
-            </li>
-          </ul>
+          {/* Sidebar content here */}
+          <Sidebar />
         </div>
       </div>
     </div>
