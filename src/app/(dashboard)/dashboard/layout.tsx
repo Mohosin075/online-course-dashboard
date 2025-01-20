@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
-import "./globals.css";
+import DashboardLayout from "@/components/ui/shared/DashboardLayout";
+import Navbar from "@/components/ui/shared/navbar/Navbar";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -21,7 +22,10 @@ export default function RootLayout({
   return (
     <html lang="en" data-theme={"light"}>
       <body className={`${poppins.variable} max-w-[1800px] mx-auto`}>
-        {children}
+        <Navbar />
+        <DashboardLayout>
+          {children}
+        </DashboardLayout>
       </body>
     </html>
   );
