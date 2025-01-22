@@ -4,7 +4,7 @@ import ProfileWithRole from "./ProfileWithRole";
 import { IoMdNotificationsOutline } from "react-icons/io";
 
 const Profile = () => {
-  const user = true;
+  const user = false;
   return (
     <div className="flex items-center gap-3 md:gap-5">
       {user ? (

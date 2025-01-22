@@ -13,6 +13,10 @@
   @apply py-2 px-2 md:px-4 rounded-md border text-xs md:text-lg font-semibold bg-primary text-white border-primary;
 }
 
+.CInput {
+  @apply w-full border bg-white text-secondaryGray rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-primaryGray
+}
+
 :root {
   --primary: #f82ba9;
   --secondary: #160e4b;
