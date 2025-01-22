@@ -1,6 +1,7 @@
 import Navbar from "@/components/ui/shared/navbar/Navbar";
+import { Children } from "@/types";
 
-const layout = ({ children }) => {
+const layout = ({ children }: Children) => {
   return (
     <div>
       <Navbar />
