@@ -34,11 +34,11 @@ const SignUp = () => {
     try {
       const res = await addUser({userData});
       console.log(res);
-      if (res?.data?.insertedId) {
-        toast.success("Sign up successfully!");
+      if (res?.data?.success) {
+        toast.success(res?.data?.message);
         router.push('/sign-in')
       }
-      if (res?.data?.message) {
+      if (!res?.data?.success) {
         toast.info("Account already exists! Use another email or Login!");
       }
     } catch (error) {
