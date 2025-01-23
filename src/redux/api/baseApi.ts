@@ -36,7 +36,17 @@ export const baseApi = createApi({
           body: userData,
         };
       },
-      invalidatesTags: ["Classes"],
+      // invalidatesTags: ["Classes"],
+    }),
+    loginUser: builder.mutation({
+      query: ({ userData }) => {
+        return {
+          url: `/login`,
+          method: "POST",
+          body: userData,
+        };
+      },
+      // invalidatesTags: ["Classes"],
     }),
     deleteProduct: builder.mutation({
       query: ({ productId }) => {
@@ -57,5 +67,6 @@ export const baseApi = createApi({
 export const {
   useDeleteProductMutation,
   useRegisterUserMutation,
+  useLoginUserMutation,
   useAddUserMutation
 } = baseApi;

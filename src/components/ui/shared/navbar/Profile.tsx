@@ -1,10 +1,13 @@
+'use client'
 import Link from "next/link";
 import { FaBars } from "react-icons/fa";
 import ProfileWithRole from "./ProfileWithRole";
 import { IoMdNotificationsOutline } from "react-icons/io";
+import { useAppSelector } from "@/redux/hooks";
+import { RootState } from "@/redux/store";
 
 const Profile = () => {
-  const user = true;
+  const user = useAppSelector((state: RootState) => state.auth.user);
   return (
     <div className="flex items-center gap-3 md:gap-5">
       {user ? (
